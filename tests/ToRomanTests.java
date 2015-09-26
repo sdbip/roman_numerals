@@ -58,7 +58,7 @@ public class ToRomanTests {
 
 
 	private static String roman(int value) {
-		for (RomanNumeral numeral : RomanNumeral.NUMERALS) {
+		for (RomanNumeral numeral : RomanNumeral.ALL_BY_DESC_VALUE) {
 			if (value >= numeral.value)
 				return numeral.numeral + roman(value - numeral.value);
 		}
