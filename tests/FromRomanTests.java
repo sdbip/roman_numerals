@@ -15,9 +15,17 @@ public class FromRomanTests {
 		assertEquals(1, fromRoman("I"));
 	}
 
+	@Test
+	public void romanForty() {
+		assertEquals(40, fromRoman("XL"));
+	}
+
+
 	private int fromRoman(String roman) {
 		if (RomanNumeral.I.numeral.equals(roman))
 			return RomanNumeral.I.value;
+		if (RomanNumeral.XL.numeral.equals(roman))
+			return RomanNumeral.XL.value;
 		return 0;
 	}
 
