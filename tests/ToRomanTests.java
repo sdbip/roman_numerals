@@ -52,10 +52,11 @@ public class ToRomanTests {
 
 
 	private String roman(int value) {
-		if (value >= 10) return "X" + roman(value - 10);
-		if (value >= 5) return "V" + roman(value - 5);
-		if (value >= 4) return "IV" + roman(value - 4);
-		if (value >= 1) return "I" + roman(value - 1);
+		final String[] numerals = { "X", "V", "IV", "I" };
+		if (value >= 10) return numerals[0] + roman(value - 10);
+		if (value >= 5) return numerals[1] + roman(value - 5);
+		if (value >= 4) return numerals[2] + roman(value - 4);
+		if (value >= 1) return numerals[3] + roman(value - 1);
 		return "";
 	}
 
