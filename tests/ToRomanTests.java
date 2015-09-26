@@ -4,6 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class ToRomanTests {
+	final static RomanNumeral[] NUMERALS = { RomanNumeral.L, RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
 
 	@Test
 	public void romanHasNoZero() {
@@ -58,8 +59,7 @@ public class ToRomanTests {
 
 
 	private static String roman(int value) {
-		final RomanNumeral[] numerals = { RomanNumeral.L, RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
-		for (RomanNumeral numeral : numerals) {
+		for (RomanNumeral numeral : NUMERALS) {
 			if (value >= numeral.value)
 				return numeral.numeral + roman(value - numeral.value);
 		}
