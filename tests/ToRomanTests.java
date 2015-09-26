@@ -37,6 +37,11 @@ public class ToRomanTests {
 	}
 
 	@Test
+	public void romanForNine() {
+		assertRomanFromValue("IX", 9);
+	}
+
+	@Test
 	public void romanForTen() {
 		assertRomanFromValue("X", 10);
 	}
@@ -47,8 +52,43 @@ public class ToRomanTests {
 	}
 
 	@Test
+	public void romanForFortyOne() {
+		assertRomanFromValue("XLI", 41);
+	}
+
+	@Test
 	public void romanForFiftyOne() {
 		assertRomanFromValue("LI", 51);
+	}
+
+	@Test
+	public void romanForNinetyOne() {
+		assertRomanFromValue("XCI", 91);
+	}
+
+	@Test
+	public void romanForTwoHundredAndOne() {
+		assertRomanFromValue("CCI", 201);
+	}
+
+	@Test
+	public void romanForFourHundredAndOne() {
+		assertRomanFromValue("CDI", 401);
+	}
+
+	@Test
+	public void romanForFiveHundredAndOne() {
+		assertRomanFromValue("DI", 501);
+	}
+
+	@Test
+	public void romanForNineHundredFifty() {
+		assertRomanFromValue("CML", 950);
+	}
+
+	@Test
+	public void romanForTwoThousandAndTen() {
+		assertRomanFromValue("MMX", 2010);
 	}
 
 
