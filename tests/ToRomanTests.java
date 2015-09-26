@@ -91,6 +91,16 @@ public class ToRomanTests {
 		assertRomanFromValue("MMX", 2010);
 	}
 
+	@Test
+	public void accept1066() {
+		assertRomanFromValue("MLXVI", 1066);
+	}
+
+	@Test
+	public void accept1989() {
+		assertRomanFromValue("MCMLXXXIX", 1989);
+	}
+
 
 	public void assertRomanFromValue(String expected, int value) {
 		assertEquals(expected, roman(value));
