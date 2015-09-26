@@ -6,17 +6,22 @@ public class ToRomanTests {
 
 	@Test
 	public void romanHasNoZero() {
-		assertEquals("", roman(0));
+		assertRomanFromValue("", 0);
 	}
 
 	@Test
 	public void romanForOne() {
-		assertEquals("I", roman(1));
+		assertRomanFromValue("I", 1);
 	}
 
 	@Test
 	public void romanForFive() {
-		assertEquals("V", roman(5));
+		assertRomanFromValue("V", 5);
+	}
+
+
+	public void assertRomanFromValue(String expected, int value) {
+		assertEquals(expected, roman(value));
 	}
 
 
