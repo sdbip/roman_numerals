@@ -1,3 +1,4 @@
+import kata.RomanNumeral;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -52,10 +53,9 @@ public class ToRomanTests {
 
 
 	private String roman(int value) {
-		final String[] numerals = { "X", "V", "IV", "I" };
-		final int[] numeralValues = { 10, 5, 4, 1 };
+		final RomanNumeral[] numerals = { RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
 		for (int i = 0; i < numerals.length; i++) {
-			if (value >= numeralValues[i]) return numerals[i] + roman(value - numeralValues[i]);
+			if (value >= numerals[i].value) return numerals[i].numeral + roman(value - numerals[i].value);
 		}
 		return "";
 	}
