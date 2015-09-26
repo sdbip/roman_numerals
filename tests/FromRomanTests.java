@@ -9,7 +9,14 @@ public class FromRomanTests {
 		assertEquals(0, fromRoman(""));
 	}
 
+	@Test
+	public void romanOne() {
+		assertEquals(1, fromRoman("I"));
+	}
+
 	private int fromRoman(String roman) {
+		if (roman.equals("I"))
+			return 1;
 		return 0;
 	}
 
