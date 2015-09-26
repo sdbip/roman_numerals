@@ -46,6 +46,11 @@ public class ToRomanTests {
 		assertRomanFromValue("XV", 15);
 	}
 
+	@Test
+	public void romanForFiftyOne() {
+		assertRomanFromValue("LI", 51);
+	}
+
 
 	public void assertRomanFromValue(String expected, int value) {
 		assertEquals(expected, roman(value));
@@ -53,7 +58,7 @@ public class ToRomanTests {
 
 
 	private String roman(int value) {
-		final RomanNumeral[] numerals = { RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
+		final RomanNumeral[] numerals = { RomanNumeral.L, RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
 		for (RomanNumeral numeral : numerals) {
 			if (value >= numeral.value)
 				return numeral.numeral + roman(value - numeral.value);
