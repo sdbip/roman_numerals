@@ -54,8 +54,8 @@ public class ToRomanTests {
 
 	private String roman(int value) {
 		final RomanNumeral[] numerals = { RomanNumeral.X, RomanNumeral.V, RomanNumeral.IV, RomanNumeral.I };
-		for (int i = 0; i < numerals.length; i++) {
-			if (value >= numerals[i].value) return numerals[i].numeral + roman(value - numerals[i].value);
+		for (RomanNumeral numeral : numerals) {
+			if (value >= numeral.value) return numeral.numeral + roman(value - numeral.value);
 		}
 		return "";
 	}
