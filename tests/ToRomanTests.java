@@ -31,10 +31,9 @@ public class ToRomanTests {
 
 
 	private String roman(int value) {
-		if (value == 2) return "II";
-		if (value == 1) return "I";
+		if (value == 0) return "";
 		if (value == 5) return "V";
-		return "";
+		return "I" + roman(value - 1);
 	}
 
 }
