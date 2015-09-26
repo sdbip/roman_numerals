@@ -19,9 +19,6 @@ public enum RomanNumeral {
 			M, CM, D, CD, C, XC, L, XL, X, IX, V, IV, I
 	};
 
-	public final String numeral() {
-		return toString();
-	}
 	public final int value;
 
 	RomanNumeral(int value) {

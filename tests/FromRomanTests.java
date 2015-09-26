@@ -39,8 +39,8 @@ public class FromRomanTests {
 
 	private int fromRoman(String roman) {
 		for (RomanNumeral numeral : RomanNumeral.ALL_BY_DESC_VALUE) {
-			if (roman.startsWith(numeral.numeral()))
-				return numeral.value + fromRoman(roman.substring(numeral.numeral().length()));
+			if (roman.startsWith(numeral.toString()))
+				return numeral.value + fromRoman(roman.substring(numeral.toString().length()));
 		}
 		return 0;
 	}
