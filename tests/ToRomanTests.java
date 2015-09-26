@@ -35,6 +35,11 @@ public class ToRomanTests {
 		assertRomanFromValue("VI", 6);
 	}
 
+	@Test
+	public void romanForTen() {
+		assertRomanFromValue("X", 10);
+	}
+
 
 	public void assertRomanFromValue(String expected, int value) {
 		assertEquals(expected, roman(value));
@@ -43,6 +48,7 @@ public class ToRomanTests {
 
 	private String roman(int value) {
 		if (value == 0) return "";
+		if (value == 10) return "X";
 		if (value == 5) return "V";
 		if (value == 4) return "IV";
 		return roman(value - 1) + "I";
