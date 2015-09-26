@@ -26,6 +26,17 @@ public class FromRomanTests {
 	}
 
 
+	@Test
+	public void accept1066() {
+		assertEquals(1066, fromRoman("MLXVI"));
+	}
+
+	@Test
+	public void accept1989() {
+		assertEquals(1989, fromRoman("MCMLXXXIX"));
+	}
+
+
 	private int fromRoman(String roman) {
 		for (RomanNumeral numeral : RomanNumeral.ALL_BY_DESC_VALUE) {
 			if (roman.startsWith(numeral.numeral))
