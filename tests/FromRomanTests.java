@@ -20,12 +20,17 @@ public class FromRomanTests {
 		assertEquals(40, fromRoman("XL"));
 	}
 
+	@Test
+	public void romanFiftyFive() {
+		assertEquals(55, fromRoman("LV"));
+	}
+
 
 	private int fromRoman(String roman) {
-		if (RomanNumeral.I.numeral.equals(roman))
-			return RomanNumeral.I.value;
-		if (RomanNumeral.XL.numeral.equals(roman))
-			return RomanNumeral.XL.value;
+		for (RomanNumeral numeral : RomanNumeral.ALL_BY_DESC_VALUE) {
+			if (roman.startsWith(numeral.numeral))
+				return numeral.value + fromRoman(roman.substring(numeral.numeral.length()));
+		}
 		return 0;
 	}
 
