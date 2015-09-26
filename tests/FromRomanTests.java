@@ -1,3 +1,4 @@
+import kata.RomanNumeral;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,8 +16,8 @@ public class FromRomanTests {
 	}
 
 	private int fromRoman(String roman) {
-		if (roman.equals("I"))
-			return 1;
+		if (RomanNumeral.I.numeral.equals(roman))
+			return RomanNumeral.I.value;
 		return 0;
 	}
 
