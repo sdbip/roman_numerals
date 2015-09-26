@@ -7,6 +7,8 @@ public enum RomanNumeral {
 	X("X", 10),
 	L("L", 50);
 
+	public final static RomanNumeral[] NUMERALS = { L, X, V, IV, I };
+
 	public final String numeral;
 	public final int value;
 
